@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/daysActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DaysActivity">
+
+    <include
+        android:id="@+id/toolbarDay"
+        layout="@layout/tool_large" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarDay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="روز بیست و یکم"
+                android:textColor="@color/colorBlue"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="27dp"
+                tools:layout_editor_absoluteY="212dp" />
+
+            <WebView
+                android:id="@+id/webDesc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                tools:ignore="WebViewLayout" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imgShareDays"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="shareClick"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarDay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toEndOf="@+id/imgFavDay"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.43"
+        app:srcCompat="@drawable/if_share"
+        tools:ignore="OnClick"
+        android:contentDescription="@string/application_desc" />
+
+    <ImageView
+        android:id="@+id/imgPrefDays"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="328dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="startPrefDays"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarDay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.77"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.43"
+        app:srcCompat="@drawable/if_settings"
+        android:contentDescription="@string/application_desc" />
+
+    <ImageView
+        android:id="@+id/imgFavDay"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/application_desc"
+        android:onClick="favClick"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbarDay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.43"
+        app:srcCompat="@drawable/if_not_fav" />
+
+</android.support.constraint.ConstraintLayout>
