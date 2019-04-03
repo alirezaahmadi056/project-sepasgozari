@@ -9,6 +9,8 @@
 /captures
 .externalNativeBuild
 
+.idea/vcs.xml
+
 # Log file
 *.log
 
