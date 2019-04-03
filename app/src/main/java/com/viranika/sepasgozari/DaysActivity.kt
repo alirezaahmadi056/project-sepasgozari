@@ -41,6 +41,7 @@ class DaysActivity : AppCompatActivity() {
             media?.start()
         }
 
+        //Change Title
         title = ""
 
         checkDayActive()
